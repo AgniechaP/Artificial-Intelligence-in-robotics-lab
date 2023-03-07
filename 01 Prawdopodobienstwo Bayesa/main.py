@@ -23,7 +23,7 @@ def main():
     P_cav = np.sum(P, axis=(1,2))
     print("P_cav = ",P_cav)
 
-
+    #Zadanie 4. 
 
 if __name__ == '__main__':
     main()
