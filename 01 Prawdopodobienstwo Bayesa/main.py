@@ -27,5 +27,12 @@ def main():
     P_toothache_giv_cavity = np.sum(P, axis=2) / P_cav
     print("P_toothache_giv_cavity = \n", P_toothache_giv_cavity)
 
+    #Zadanie 5. P(Cavity|toothache v catch)
+    licznik = P_cav - P[:,1,1]
+    mianownik = np.sum(P, axis=(0,1,2)) - np.sum(P[:,1,1], axis=0)
+    P_cavity_giv_toothache_or_catch = licznik/mianownik
+    print("P_cavity_giv_toothache_or_catch = \n", P_cavity_giv_toothache_or_catch)
+
+
 if __name__ == '__main__':
     main()
