@@ -17,7 +17,13 @@ def main():
     #Zadanie 2. P(Toothache)
     #axis 0 -> cavity, axis 1 -> toothache, axis 2 -> catch
     P_too = np.sum(P, axis=(0,2))
-    print(P_too)
+    print("P_too = ", P_too)
+
+    #Zadanie 3. P(Cavity)
+    P_cav = np.sum(P, axis=(1,2))
+    print("P_cav = ",P_cav)
+
+
 
 if __name__ == '__main__':
     main()
