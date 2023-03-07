@@ -23,7 +23,9 @@ def main():
     P_cav = np.sum(P, axis=(1,2))
     print("P_cav = ",P_cav)
 
-    #Zadanie 4. 
+    #Zadanie 4. P(Toothache|Cavity)
+    P_toothache_giv_cavity = np.sum(P, axis=2) / P_cav
+    print("P_toothache_giv_cavity = \n", P_toothache_giv_cavity)
 
 if __name__ == '__main__':
     main()
