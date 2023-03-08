@@ -42,7 +42,7 @@ def main():
     licznik = P_cav - P[:,1,1]
     mianownik = np.sum(P, axis=(0,1,2)) - np.sum(P[:,1,1], axis=0)
     P_cavity_giv_toothache_or_catch = licznik/mianownik
-    print("P_cavity_giv_toothache_or_catch = \n", P_cavity_giv_toothache_or_catch)
+    print("5. P_cavity_giv_toothache_or_catch = \n", P_cavity_giv_toothache_or_catch)
 
     #Zadanie 6. Zaleznosc wielkosci tablicy od liczby zmiennych, gdzie zmienne sa binarne 0/1:
     #Wielkosc tablicy wyraza sie jako 2^liczba zmiennych. Tu 2^3 = 8 i jest to wielkosc tablicy
@@ -67,7 +67,12 @@ def main():
     P_cav_giv_too_cat = P/P_too_cat
     print("P_cav_giv_too_cat ",P_cav_giv_too_cat)
 
+    #Zadanie 8. Z zajec
+    #Wspolczynnik normalizujacy alfa, suma wartosci w rozkladzie musi sie rownac 1, czyli podzielic przez sume wszystkich elementow (1/suma elementow w rozkladzie)
+
     #Zadanie 9.
+
+    #Zadanie 10. P(Cavity|Toothache,Catch) majac dane P(Toothache|Cavity) i P(Catch|Cavity)
 
 
 if __name__ == '__main__':
