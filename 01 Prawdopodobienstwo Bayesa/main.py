@@ -33,6 +33,15 @@ def main():
     P_cavity_giv_toothache_or_catch = licznik/mianownik
     print("P_cavity_giv_toothache_or_catch = \n", P_cavity_giv_toothache_or_catch)
 
+    #Zadanie 6. Zaleznosc wielkosci tablicy od liczby zmiennych, gdzie zmienne sa binarne 0/1:
+    #Wielkosc tablicy wyraza sie jako 2^liczba zmiennych. Tu 2^3 = 8 i jest to wielkosc tablicy
+
+    #Zadanie 7. Przechowywanie tablicy dla 32 zmiennych zapisujac liczby jako 23 bitowy float
+    bits = 32 * 2**32
+    print("Rozmiar (bity): ", bits)
+
+    #Zadanie 8. 
+
 
 if __name__ == '__main__':
     main()
