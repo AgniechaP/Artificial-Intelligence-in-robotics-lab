@@ -40,25 +40,18 @@ def main():
     bits = 32 * 2**32
     print("Rozmiar (bity): ", bits)
 
-    #Zadanie 8.
-    P_catch_giv_cav =  np.sum(P, axis=1).T / P_cav
-    print("P_catch_giv_cav ", P_catch_giv_cav)
+    #Zadanie 8. P(Cavity | Tootache, Catch)
+    # (1) Regula iloczynu: P(a,b) = P(a|b)P(b)
+    # (2) Regula Bayesa: P(b|a) = P(a|b)*P(b)/P(a)
+    # Zatem z (2) P(Cav|Too,Cat)=P(Too,Cat|Cav)*P(Cav)/P(Too,Cat)
+    # Z (1) P(Cav|Too,Cat)=P(Too,Cat,Cav)/P(Too,Cat)
+    # Stąd P(Too,Cat,Cav)=P(Too,Cat|Cav)*P(Cav)
 
-    P_calosc = P_toothache_giv_cavity*P_catch_giv_cav*P_cav
-    print("Calosc=", P_calosc)
+    P_too_cat_giv_cav = P/np.reshape(P_cav, (2, 1, 1))
+    print("P_too_cat_giv_cav ", P_too_cat_giv_cav)
 
-    P_too_catch = 
+    #TODO continue
 
-
-
-
-    # P_too_cat_giv_cav = P / np.reshape(P_cav, (2, 1, 1))
-    # print(P_too_cat_giv_cav)
-    P_too_cat_giv_cav = P / np.reshape(P_cav, (2, 1, 1))
-    print("P_too_cat_giv_cav: ", P_too_cat_giv_cav)
-    P_too_cat = np.sum((P_too_cat_giv_cav * np.reshape(P_cav, (2, 1, 1))), axis=0)
-    P_cav_giv_too_cat = P_too_cat_giv_cav * np.reshape(P_cav, (2, 1, 1)) / P_too_cat
-    print("Odp. do zadania 8 : " + str(P_cav_giv_too_cat))
     #Zadanie 9.
 
 
