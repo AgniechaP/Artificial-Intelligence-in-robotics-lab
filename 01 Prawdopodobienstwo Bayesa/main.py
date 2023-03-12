@@ -73,6 +73,16 @@ def main():
     #Zadanie 9.
 
     #Zadanie 10. P(Cavity|Toothache,Catch) majac dane P(Toothache|Cavity) i P(Catch|Cavity)
+    # Korzystając z zadania 8. wiemy, że:
+    # 1) P(Cav | Too, Cat) = P(Too, Cat | Cav) * P(Cav) / P(Too,Cat)
+    # 2) P(Cav | Too, Cat) = P(Cav, Too, Cat) / P(Too, Cat)
+    # Zmienne Toothache i Catch są niezależne pod warunkiem Cavity, zatem P(Too, Cat | Cav) = P(Too | Cav) * P(Catch | Cavity)
+    # P(Cav | Too, Cat) = P(Too | Cav) * P(Cat | Cav) * P(Cav) / P(Too, Cat)
+    # P(Too | Cav) = P_toothache_giv_cavity, P(Cat | Cav) = P_cat_git_cavity, P(Cav) = P_cav, P(Too, Cat) = P_too_cat
+
+    # P(Cav|Too,Cat) = P(Too|Cav)*P(Cat|Cav)*P(Cav)/P(Too,Cat) = P(Too,Cat|Cav)*P(Cav)/P(Too,Cat)
+    P_Cav_giv_too_cat_10 = P_too_cat_giv_cav * np.reshape(P_cav, (2, 1, 1)) / P_too_cat
+    print("P(Cav | Too, Cat) zadanie 10.: ", P_Cav_giv_too_cat_10)
 
 
 if __name__ == '__main__':
