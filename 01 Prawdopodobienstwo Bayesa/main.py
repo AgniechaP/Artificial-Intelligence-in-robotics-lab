@@ -84,6 +84,9 @@ def main():
     P_Cav_giv_too_cat_10 = P_too_cat_giv_cav * np.reshape(P_cav, (2, 1, 1)) / P_too_cat
     print("P(Cav | Too, Cat) zadanie 10.: ", P_Cav_giv_too_cat_10)
 
+    #Zadanie 11. Jak rozłożyć pełen rozkład prawdopoodbieństwa mając dane z poprzedniego punktu?
+    # P(Cav, Too, Cat) = P(Cav|Too,Cat)*P(Too,Cat) = P(Too|Cav)*P(Cat|Cav)*P(Cav)
+
 
 if __name__ == '__main__':
     main()
