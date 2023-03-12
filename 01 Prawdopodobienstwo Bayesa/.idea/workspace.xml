@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a61550b-187c-42af-bb55-1e70e2578e5a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +48,7 @@
       <workItem from="1678223323270" duration="7547000" />
       <workItem from="1678261492115" duration="9944000" />
       <workItem from="1678291044288" duration="4401000" />
-      <workItem from="1678581452644" duration="1878000" />
+      <workItem from="1678581452644" duration="2395000" />
     </task>
     <servers />
   </component>

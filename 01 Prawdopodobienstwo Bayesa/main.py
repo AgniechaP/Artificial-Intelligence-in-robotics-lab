@@ -47,7 +47,7 @@ def main():
     #Zadanie 6. Zaleznosc wielkosci tablicy od liczby zmiennych, gdzie zmienne sa binarne 0/1:
     #Wielkosc tablicy wyraza sie jako 2^liczba zmiennych. Tu 2^3 = 8 i jest to wielkosc tablicy
 
-    #Zadanie 7. Przechowywanie tablicy dla 32 zmiennych zapisujac liczby jako 23 bitowy float
+    #Zadanie 7. Przechowywanie tablicy dla 32 zmiennych zapisujac liczby jako 32 bitowy float
     bits = 32 * 2**32 #ok. 16 GB
     print("Rozmiar (bity): ", bits)
 
@@ -86,6 +86,16 @@ def main():
 
     #Zadanie 11. Jak rozłożyć pełen rozkład prawdopoodbieństwa mając dane z poprzedniego punktu?
     # P(Cav, Too, Cat) = P(Cav|Too,Cat)*P(Too,Cat) = P(Too|Cav)*P(Cat|Cav)*P(Cav)
+
+    #Zadanie 12. Ile pamięci potrzeba do przechowywania pełnego rozkładu, rozłożonego na czynniki, jeśli mamy 31 niezależnych warunkowo zmiennych i jedną zmienną separującą te zmienne?
+    #Mamy 31 niezależnych zmiennych. Zakładamy, że zmienne mają wartości binarne (0/1), zatem będzie 31 tablic dwuelementowych z prawdopodobieństwem warunkowym (pod warunkiem zmiennej separującej).
+    #Jeśli zmienna sepacująca = B, to mamy P(A1|B), P(A2|B)...P(A31|B)
+    #Mamy też tablicę dwuelementową z prawdopodobieństwem zmiennej separującej P(B)
+    #Iloczyn prawdopodobieństw = pełen rozkład
+
+    # Ile zmiennych: 31*2+2 (31 tablic dwuelementowych + tablica dwuelementowa)
+    # Pamięć = rozmiar zmiennych (np. 32 bity) * Ile zmiennych
+
 
 
 if __name__ == '__main__':
