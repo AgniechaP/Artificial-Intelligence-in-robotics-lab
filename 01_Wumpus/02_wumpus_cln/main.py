@@ -246,7 +246,7 @@ def main():
         percept = env.getPercept()
         action = agent(percept)
         # get what the agent thinks of the environment
-        P = agent.getPosterior()
+        P = agent.get_posterior()
 
         print('Percept: ', percept)
         print('Action ', action)
@@ -264,3 +264,11 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# 2. Ile wynosi wartosc P(...) jesli podmuch jest tylko w lokacjach sasiadujacych z dolami?
+# Odpowiedz: jeden (bo bryzy sa tylko tam gdzie sa doly)
+
+# 3. Jak mozna dalej rozlozyc ten rozklad?
+# Odpowiedz: iloczyn poszczegolnych zmiennych
+
+# Zadanie domowe: jak prawdopodobienstwo q majac known i majac breeze wyglada i jak do niego dojsc - alternatywnie mozna zaczac od 6 ale to chyba niemozliwe
