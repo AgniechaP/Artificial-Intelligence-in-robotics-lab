@@ -58,5 +58,7 @@ def main():
     q = bayes_infer.query(['Battery'], evidence={'Moves' : 1})
     print(q)
     # Result Battery(1) = 1
+
+    # 4. Add NotIcyWeather and StarterMotor
 if __name__ == '__main__':
     main()
