@@ -59,7 +59,7 @@ def main():
     bayes_infer = VariableElimination(bayesNet)
 
     # Tutaj (w porownaniu do zadania 3. - 1 to true, 0 to false, bo w TabularCPD najpierw ida wartosci false)
-    # 2. P(Starts | Gas, Radio) <- Inny wynik niz w odpowiedziach po dodaniu NotIcyWeather i StarterMotor
+    # 2. P(Starts | Gas, Radio) <- Inny wynik niz w odpowiedziach przez dodanie NotIcyWeather i StarterMotor
     q = bayes_infer.query(['Starts'], evidence={'Radio': 1, 'Gas': 1})
     print('P(Starts | Gas, Radio) =\n', q)
     # Result Starts(1) = 0,9215 = Starts(True) | Radio(True), Gas(True)

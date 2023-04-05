@@ -24,7 +24,7 @@ def main():
     bayesNet.add_edge('Gas', 'Starts')
     bayesNet.add_edge('Starts', 'Moves')
 
-    # Adding CPDs for each node. A quick note is that while adding proabilities, we have to give FALSE values first.
+    # Adding CPDs for each node. FALSE values first.
     cpd_bat = TabularCPD('Battery', 2, values=[[.3], [.7]])
     cpd_gas = TabularCPD('Gas', 2, values=[[.5], [.5]])
     cpd_igni = TabularCPD(variable='Ignition', variable_card=2,
@@ -39,7 +39,7 @@ def main():
     cpd_mov_starts = TabularCPD(variable='Starts', variable_card=2,
                                 values=[[1.00, 1.00, 1.00, 0.05],
                                         [0.00, 0.00, 0.00, 0.95]], evidence=['Ignition', 'Gas'], evidence_card=[2, 2])
-    bayesNet.add_cpds(cpd_bat, cpd_gas, cpd_igni,cpd_rad, cpd_mov, cpd_mov_starts)
+    bayesNet.add_cpds(cpd_bat, cpd_gas, cpd_igni, cpd_rad, cpd_mov, cpd_mov_starts)
 
     # Checking if model is correctly added
     print('Check model :', bayesNet.check_model())
@@ -61,6 +61,6 @@ def main():
     print(q)
     # Result Battery(1) = 1
 
-    # 4. Add NotIcyWeather and StarterMotor -> Skrypt Zadanie_4_4
+    # 4. Add NotIcyWeather and StarterMotor -> Skrypt Zadanie_4_4.py
 if __name__ == '__main__':
     main()
