@@ -1,3 +1,5 @@
+# Skrypt do testow
+
 from pgmpy.models import FactorGraph
 from pgmpy.factors.discrete import DiscreteFactor
 from pgmpy.inference import BeliefPropagation
