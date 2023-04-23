@@ -28,6 +28,7 @@ cpd_umbrella_t = TabularCPD('Umbrella_t', variable_card=2,
 bayesNet.add_cpds(cpd_rain_t_1, cpd_rain_t, cpd_umbrella_t)
 # Checking if model is correctly added
 print('Check model :', bayesNet.check_model())
+print(bayesNet.number_of_edges())
 
 bayes_infer = VariableElimination(bayesNet)
 
